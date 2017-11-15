@@ -52,7 +52,7 @@ public class Principal {
 		} //fin while
 
 		for(Libro libro:ListLibros) {
-			System.out.println(libro);
+			System.out.println(libro); //se pinta por pantalla
 		}
 		
 	}
