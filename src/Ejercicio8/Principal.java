@@ -49,6 +49,7 @@ public class Principal {
 			if ((event == XMLStreamConstants.END_ELEMENT) && (reader.getLocalName() == "libro")) {
 				ListLibros.add(lib);
 			}
+			
 		} //fin while
 
 		for(Libro libro:ListLibros) {

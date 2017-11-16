@@ -1,1 +1,8 @@
-<?xml version="1.0" ?><libros><libro ISBN="512-65-54-875-65"><Titulo>Acceso a datos</Titulo><Autores><Autor>Alicia Ramos</Autor><Autor>Ana Arribas</Autor></Autores><Editorial>Garceta</Editorial></libro></libros>
+<Ejercicio10.ListaLibros>
+  <DatosLibro>
+    <isbn>95686-658-654-855</isbn>
+    <titulo>El libro de Jade</titulo>
+    <autor>Lena Valenti</autor>
+    <editorial>Vanir</editorial>
+  </DatosLibro>
+</Ejercicio10.ListaLibros>
