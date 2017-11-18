@@ -23,7 +23,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 public class Principal {
 
 	public static void main(String[] args) {
-		//crearFicheroLibro();
+		crearFicheroLibro();
 		
 		crearFicheroXML();
 		leerXML();
