@@ -7,17 +7,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-
-import Ejercicio10.Libro;
-import Ejercicio10.ListaLibros;
-import Ejercicio10.MiObjectOutputStream;
+import com.google.gson.reflect.TypeToken;
 
 public class Principal {
 	
@@ -30,16 +27,35 @@ public static void main(String[] args) {
 }
 
 
+private static void leerJSON(ArrayList<String> librosJson) {
+	Gson gson = new Gson();
+	Libro libro;
+	for (int i = 0; i < librosJson.size(); i++) {
+		libro = gson.fromJson(librosJson.get(i), Libro.class);
+	System.out.println(libro);
+	}
+	
+}
+
+
 private static void crearJSON() {
 
 	ArrayList<Libro> libros = getLibros();
-	
+	String cadena ="";
+	ArrayList<String> librosJson= new ArrayList<>();
 	Gson prettyGson =  new GsonBuilder().setPrettyPrinting().create();
-	
+	Gson gson = new Gson();
 	for (Libro libro : libros) {
 		
 		System.out.println(prettyGson.toJson(libro));
+		cadena = gson.toJson(libro);
+		librosJson.add(cadena);
+		
 	}
+	
+	leerJSON(librosJson);
+		
+	
 }
 
 
